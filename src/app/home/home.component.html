@@ -1,0 +1,43 @@
+<div class="parallax-container">
+	<div class='heading left-align'>
+		<h1>Summon your ipsum</h1>
+		<h2>...in ten heartbeats</h2>
+	</div>
+
+      <div materialize="parallax">
+				<img src="https://i.ytimg.com/vi/-n3OjESE9aU/maxresdefault.jpg">
+			</div>
+</div>
+
+<div class="section white">
+	<div class="row container">
+    <div class="col s12">
+      How many paragraphs do you want?
+      <div class="input-field inline">
+        <input id="number" type='number' min='1' [(ngModel)]="num" [placeholder]="num">
+      </div>
+			<span id='lengthPrompt'>Short paragraphs or long ones?</span>
+			<div class="switch">
+				<label>
+					Short
+					<input type="checkbox">
+					<span class="lever" (click)="changeLength()"></span>
+					Long
+				</label>
+			</div>
+			<a
+				class="waves-effect waves-light btn btn-floating pulse"
+				id="get"
+				(click)="getIpsum()"
+				><i class="material-icons right">play_arrow</i></a>
+    </div>
+  </div>
+	<div class="row container">
+		<div *ngIf="long; else short">
+			<div id="ipsumTarget" *ngFor="let ipsum of ipsumArray" [innerHTML]="ipsum"></div>
+		</div>
+		<ng-template #short>
+			<div id="ipsumTarget" *ngFor="let ipsum of ipsumArray" [innerHTML]="ipsum"></div>
+		</ng-template>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+#paraNum {
+	max-width: 30%;
+}
+
+.switch {
+	display: inline-block;
+}
+
+#lengthPrompt {
+	margin: 0 20px;
+}
+
+#get {
+	margin-left: 3em;
+}
+
+#ipsumTarget {
+	margin-bottom: 20px;
+}
+
+.parallax-container {
+      height: 450px;
+    }
+
+.heading {
+	margin-left: 30px;
+	color: white;
+}

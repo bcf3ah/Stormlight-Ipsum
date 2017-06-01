@@ -1,0 +1,137 @@
+import { Injectable } from '@angular/core';
+
+export class IpsumService {
+	words: String[] = ['Kaladin',
+		'Dalinar',
+		'Shallan',
+		'Davar',
+		'Kolinar',
+		'Stormblessed',
+		'Roshar',
+		'Wit',
+		'Heralds',
+		'Alethkar',
+		'Honor',
+		'Odium',
+		'Hoid',
+		'Jasnah',
+		'Navani',
+		'Szeth',
+		'Nale',
+		'war',
+		'Horneater',
+		'Shardblade',
+		'Shardplate',
+		'Honorblade',
+		'Fabrial',
+		'rockbud',
+		'Elhokar',
+		'Adolin',
+		'Renarin',
+		'Dallet',
+		'Brightlord',
+		'lighteyes',
+		'darkeyes',
+		'station',
+		'stormlight',
+		'lashing',
+		'Kholin',
+		'Cenn',
+		'Knights',
+		'radiant',
+		'swords',
+		'spear',
+		'summon',
+		'emerald',
+		'broam',
+		'Rysn',
+		'Eshonai',
+		'Stormfather',
+		'parshmen',
+		'voidbringers',
+		'alethi',
+		'warcamps',
+		'Unclaimed',
+		'Hills',
+		'oathbringer',
+		'ancient',
+		'windrunner',
+		'lightweaver',
+		'surgebinder',
+		'bondsmith',
+		'assassin',
+		'white',
+		'feast',
+		'Syl',
+		'Pattern',
+		'Shadesmar',
+		'hunt',
+		'santhid',
+		'bridge',
+		'listeners',
+		'parshendi',
+		'arrows',
+		'Blackthorn',
+		'ironstance',
+		'windstance',
+		'Taln',
+		'Ghostbloods',
+		'whitespine',
+		'Middlefest',
+		'gems',
+		'diamond',
+		'Veil',
+		'Taravangian',
+		'riddens',
+		'kings',
+		'guards',
+		'Sadeas',
+		'Elit',
+		'stormwardens',
+		'Natanatan',
+		'glyphs',
+		'surges',
+		'truthwatchers',
+		'stormwatchers',
+		'stone',
+		'ten',
+		'essences',
+		'cosmere',
+		'Sebarial',
+		'imprisonment',
+		'spren',
+		'wind',
+		'rain',
+		'storms',
+		'brooding',
+		'murder',
+		'army',
+		'archers',
+		'Everstorm',
+		'stormward',
+		'leeward',
+		'Moash',
+		'Graves',
+		'highstorm'];
+
+		getShortIpsum(): String {
+			let result = [];
+			for (var i = 0; i<=20; i++){
+				let num = Math.floor(Math.random() * (this.words.length - 1));
+				result.push(this.words[num]);
+			}
+			return result.join(" ");
+		}
+
+		getLongIpsum(): String {
+			let result = [];
+			for (var i = 0; i<=100; i++){
+				let num = Math.floor(Math.random() * (this.words.length - 1));
+				result.push(this.words[num]);
+			}
+			return result.join(" ");
+		}
+
+	constructor() { }
+
+}
