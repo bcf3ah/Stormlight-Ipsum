@@ -10,13 +10,15 @@
 </div>
 
 <div class="section white">
-	<div class="row container">
-    <div class="col s12">
-      How many paragraphs do you want?
+	<div class="row center-align">
+    <div class="col s4 center-align">
+      <h5>Number of paragraphs: </h5>
       <div class="input-field inline">
         <input id="number" type='number' min='1' [(ngModel)]="num" [placeholder]="num">
       </div>
-			<span id='lengthPrompt'>Short paragraphs or long ones?</span>
+		</div>
+		<div class="col s4 center-align">
+			<h5>Short paragraphs or long ones?</h5>
 			<div class="switch">
 				<label>
 					Short
@@ -25,19 +27,21 @@
 					Long
 				</label>
 			</div>
+		</div>
+		<div class="col s4">
 			<a
-				class="waves-effect waves-light btn btn-floating pulse"
+				class="waves-effect waves-light btn"
 				id="get"
 				(click)="getIpsum()"
-				><i class="material-icons right">play_arrow</i></a>
-    </div>
+				>Summon <i class="material-icons right">play_arrow</i></a>
+		</div>
   </div>
 	<div class="row container">
 		<div *ngIf="long; else short">
-			<div id="ipsumTarget" *ngFor="let ipsum of ipsumArray" [innerHTML]="ipsum"></div>
+			<h5 id="ipsumTarget" *ngFor="let ipsum of ipsumArray" [innerHTML]="ipsum"></h5>
 		</div>
 		<ng-template #short>
-			<div id="ipsumTarget" *ngFor="let ipsum of ipsumArray" [innerHTML]="ipsum"></div>
+			<h5 id="ipsumTarget" *ngFor="let ipsum of ipsumArray" [innerHTML]="ipsum"></h5>
 		</ng-template>
 	</div>
 </div>
