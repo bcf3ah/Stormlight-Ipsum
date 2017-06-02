@@ -5,7 +5,7 @@
 	</div>
 
       <div materialize="parallax">
-				<img src="https://i.ytimg.com/vi/-n3OjESE9aU/maxresdefault.jpg">
+				<img src="https://s11.postimg.org/wvq9wunsj/stormlightipsum.jpg">
 			</div>
 </div>
 
@@ -30,13 +30,15 @@
 		</div>
 		<div class="col s4">
 			<a
+				pageScroll
+				href="#results"
 				class="waves-effect waves-light btn"
 				id="get"
 				(click)="getIpsum()"
 				>Summon <i class="material-icons right">play_arrow</i></a>
 		</div>
   </div>
-	<div class="row container">
+	<div id='results' class="row container">
 		<div *ngIf="long; else short">
 			<h5 id="ipsumTarget" *ngFor="let ipsum of ipsumArray" [innerHTML]="ipsum"></h5>
 		</div>
